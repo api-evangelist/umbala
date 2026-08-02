@@ -1,7 +1,24 @@
 aid: umbala
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/umbala.png
 name: Umbala
-description: Umbala is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Umbala (Umbala Labs, formerly Umbala Technologies / UmbalaTv) is a Vietnamese
+  consumer video and camera technology startup backed by 500 Global. It built the UmbalaTv
+  short-video and livestream mobile app and later the Umbala Network blockchain platform,
+  including StreamX decentralized live video streaming and the CameraX camera AI/AR engine.
+  The company currently maintains a minimal site at umbala.io and publishes no public API,
+  developer documentation, SDKs, or machine-readable specifications; its historical
+  umbala.tv domain now redirects to unrelated third-party content.
 url: https://raw.githubusercontent.com/api-evangelist/umbala/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +28,14 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Video
+- Streaming
+- Camera
+- Blockchain
+- Mobile
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +44,15 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://umbala.tv
+  url: https://umbala.io
+- type: DomainSecurity
+  url: security/umbala-domain-security.yml
+- type: WellKnown
+  url: well-known/umbala-well-known.yml
+- type: LLMsTxt
+  url: llms/umbala-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

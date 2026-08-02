@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of umbala.tv and umbala.io
+note: >-
+  The historical product domain umbala.tv no longer belongs to the company's
+  content surface: it 301-redirects through 789bets.biz to barrybulakites.co,
+  an unrelated Vietnamese-language gambling site. Every path on umbala.tv
+  returns HTTP 200 with that site's HTML (soft 404s served as text/html), so
+  no well-known documents were saved from it. The company's current site,
+  umbala.io (Umbala Labs), returns real 404s for all well-known paths. No
+  discovery documents exist on either host.
+hosts:
+  - host: https://umbala.tv
+    redirects_to: https://barrybulakites.co/ (via https://789bets.biz/)
+    hijacked_or_repurposed: true
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        soft_404: true
+        content_type: text/html
+      - path: /llms.txt
+        status: 200
+        soft_404: true
+        content_type: text/html
+  - host: https://umbala.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404

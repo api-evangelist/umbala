@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+note: >-
+  umbala.io is the company's current site (Umbala Labs). The historical
+  product domain umbala.tv no longer serves company content — it
+  301-redirects via 789bets.biz to barrybulakites.co, an unrelated
+  gambling site — but its posture is recorded since it remains associated
+  with the brand.
+hosts:
+- host: umbala.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  7 05:24:14 2026 GMT
+  hsts: false
+- host: umbala.tv
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  1 15:58:15 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  repurposed: redirects to unrelated gambling site (barrybulakites.co)
+domains:
+- domain: umbala.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
+- domain: umbala.tv
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
